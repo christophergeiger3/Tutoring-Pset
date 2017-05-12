@@ -39,7 +39,7 @@ def prompt_user():
     pass  # Remove this line when you are ready to test your function!
 
 
-#  --- Helper function! You can skip this code... ---
+#  ------ Helper function! You can skip this code... ------
 
 
 def route(selection):
@@ -90,7 +90,7 @@ def clear():
     print('\n' * 100)
 
 
-# --- End of Helper function ---
+# --------- End of Helper function ---------
 
 def add(n, k):
     """
