@@ -3,12 +3,12 @@ from FirstChallenge import *
 # Note! If this file does not run in pycharm, go to the folder containing this file, right click,
 # select "Mark Directory as" and then "Sources Root" . Things should start working from there.
 
-# ToDO: Implement test file; work on other challenges
+# ToDO: Add description for failure cases
 
 
 # Addition
 def test_add():
-    test_cases = [(1, 2), (2, 3) , (3, 4) (0, 0) (10, 19)]
+    test_cases = [(1, 2), (2, 3) , (3, 4) ,(0, 0), (10, 19)]
     for s in test_cases:
         if add(s[0], s[1]) == s[0] + s[1]:
             continue
@@ -19,7 +19,7 @@ def test_add():
 
 # Subtraction
 def test_sub():
-    test_cases = [(1, 2), (2, 3), (3, 4)(0, 0)(10, 19)]
+    test_cases = [(1, 2), (2, 3), (3, 4),(0, 0),(10, 19)]
     for s in test_cases:
         if subtract(s[0], s[1]) == s[0] - s[1]:
             continue
@@ -30,7 +30,7 @@ def test_sub():
 
 # Multiplication
 def test_mult():
-    test_cases = [(1, 2), (2, 3), (3, 4)(0, 0)(10, 19)]
+    test_cases = [(1, 2), (2, 3), (3, 4),(0, 0),(10, 19)]
     for s in test_cases:
         if multiplication(s[0], s[1]) == s[0] * s[1]:
             continue
@@ -41,7 +41,7 @@ def test_mult():
 
 # Division
 def test_div():
-    test_cases = [(1, 2), (2, 3), (3, 4)(0, 0)(10, 19)]
+    test_cases = [(1, 2), (2, 3), (3, 4),(0, 0),(10, 19)]
     for s in test_cases:
         if division(s[0], s[1]) == s[0] + s[1]:
             continue
@@ -56,18 +56,28 @@ def test_mod():
     for num in test_cases:
         flag = True if num%2 == 0 else False
         if flag == modulus(num):
-            continue
+            pass
+        else:
+            return False
 
     return True
 
 # Assembly
+
+# ToDO: Add description for each failure
+print("---------------------------------------")
 print("Testing add()....")
 print("add() passed!") if test_add() else print("add() failed.")
+print("---------------------------------------")
 print("Testing subtract()....")
 print("subtract() passed!") if test_sub() else print("subtract() failed.")
+print("---------------------------------------")
 print("Testing multiplication()....")
 print("multiplication() passed!") if test_mult() else print("multiplication() failed.")
+print("---------------------------------------")
 print("Testing division()....")
 print("division() passed!") if test_div() else print("division() failed.")
+print("---------------------------------------")
 print("Testing modulus()....")
 print("modulus() passed!") if test_mod() else print("modulus() failed.")
+print("---------------------------------------")
