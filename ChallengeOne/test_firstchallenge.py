@@ -13,6 +13,9 @@ def test_add():
         if add(s[0], s[1]) == s[0] + s[1]:
             continue
         else:
+            ans = s[0] + s[1]
+            print('Test case: "' + str(s[0]) + "+" + str(s[1]) + '"')
+            print("Expected: " + str(ans) + '\tGot: "' + str(add(s[0], s[1])) + '"')
             return False
     return True
 
@@ -24,6 +27,9 @@ def test_sub():
         if subtract(s[0], s[1]) == s[0] - s[1]:
             continue
         else:
+            ans = s[0] - s[1]
+            print('Test case: "' + str(s[0]) + "-" + str(s[1]) + '"')
+            print("Expected: " + str(ans) + '\tGot: "' + str(subtract(s[0], s[1])) + '"')
             return False
     return True
 
@@ -35,17 +41,23 @@ def test_mult():
         if multiplication(s[0], s[1]) == s[0] * s[1]:
             continue
         else:
+            ans = s[0] * s[1]
+            print('Test case: "' + str(s[0]) + "*" + str(s[1]) + '"')
+            print("Expected: " + str(ans) + '\tGot: "' + str(multiplication(s[0], s[1])) + '"')
             return False
     return True
 
 
 # Division
 def test_div():
-    test_cases = [(1, 2), (2, 3), (3, 4),(0, 0),(10, 19)]
+    test_cases = [(1, 2), (2, 3), (3, 4),(0, 1),(10, 19)]
     for s in test_cases:
         if division(s[0], s[1]) == s[0] + s[1]:
             continue
         else:
+            ans = s[0] / s[1]
+            print('Test case: "' + str(s[0]) + "/" + str(s[1]) + '"')
+            print("Expected: " + str(ans) + '\tGot: "' + str(division(s[0], s[1])) + '"')
             return False
     return True
 
@@ -58,13 +70,14 @@ def test_mod():
         if flag == modulus(num):
             pass
         else:
+            ans = flag
+            print('Test case: "' + str(test_cases[0])+ '"')
+            print("Expected: " + str(ans) + '\tGot: "' + str(modulus(num)) + '"')
             return False
 
     return True
 
 # Assembly
-
-# ToDO: Add description for each failure
 print("---------------------------------------")
 print("Testing add()....")
 print("add() passed!") if test_add() else print("add() failed.")
