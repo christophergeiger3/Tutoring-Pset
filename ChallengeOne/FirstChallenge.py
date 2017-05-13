@@ -37,7 +37,7 @@ def prompt_user():
     # Write your code on the following lines!
 
 
-    pass  # Remove this line when you are ready to test your function!
+    return input()  # Remove this line when you are ready to test your function!
 
 
 #  ------ Helper function! You can skip this code... ------
