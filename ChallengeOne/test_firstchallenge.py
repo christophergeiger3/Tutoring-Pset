@@ -50,9 +50,9 @@ def test_mult():
 
 # Division
 def test_div():
-    test_cases = [(1, 2), (2, 3), (3, 4),(0, 1),(10, 19)]
+    test_cases = [(2, 1), (3, 2), (9, 3),(0, 1),(19, 10)]
     for s in test_cases:
-        if division(s[0], s[1]) == s[0] + s[1]:
+        if division(s[0], s[1]) == s[0] / s[1]:
             continue
         else:
             ans = s[0] / s[1]
