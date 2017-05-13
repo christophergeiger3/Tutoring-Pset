@@ -30,6 +30,7 @@ def prompt_user():
     5 - Modulus
 
     After printing out these lines, the program should also return the user's choice as an integer.
+    Note: There is no test function for this first function, since it takes a user input.
 
     :returns selection: An integer selection, the user's selection.
     """
@@ -179,7 +180,8 @@ while True:
     the program.
     For example, maybe you could add a function that, given a radius, returns the area of a circle. Or maybe you could
     create a function that converts fahrenheit to celsius. Or maybe a function that solves the quadratic equation for a
-    given a, b, and c. The world is your oyster, and there's a lot to learn.
+    given a, b, and c. Or maybe a function that calculates exponents.
+    The world is your oyster, and there's a lot to learn.
     
     Feel free to look through the code that I wrote if you are interested, but please don't feel intimidated by it!
     There are simpler ways to write the code that I wrote (that even a beginner could write) but I just wrote mine in
