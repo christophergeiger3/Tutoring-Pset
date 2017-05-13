@@ -165,3 +165,28 @@ while True:
     clear()
     route(qweewq)
 # --- End of Assembly ---
+
+"""
+    You did it!
+    That's the end of your first challenge file! How does it feel?
+    
+    Now that you've finished this: ask yourself - is there any way I can improve the code I wrote?
+    In programming, that's what we call "hacking" , when you take something that's already been made and you improve
+    upon it. Notice the difference between the way most people use it, and the way actual programmers use it (most
+    people refer to "hacking" as what real programmers call "cracking")
+    
+    So for this problem, think about ways you could improve stuff for the user, or maybe things that you could add to
+    the program.
+    For example, maybe you could add a function that, given a radius, returns the area of a circle. Or maybe you could
+    create a function that converts fahrenheit to celsius. Or maybe a function that solves the quadratic equation for a
+    given a, b, and c. The world is your oyster, and there's a lot to learn.
+    
+    Feel free to look through the code that I wrote if you are interested, but please don't feel intimidated by it!
+    There are simpler ways to write the code that I wrote (that even a beginner could write) but I just wrote mine in
+    a more concise style, that might look a little more complex. I have no doubt in my mind you could write the same
+    code if given the chance, but I choose to write certain parts myself to ensure that you only spent your time on
+    the parts most relevant to your learning experience. Writing a bunch of if statements would just be tedious for you,
+    and I doubt that you would get much from it.
+    
+    Now, on to the next file!
+"""
