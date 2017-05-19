@@ -1,11 +1,11 @@
 import random
 '''
-    ToDO: Add to me
-    
+    ToDO: Add to me, finish assembly, all words should have the same length as secret_word (function: get_additional_words)
 '''
 
 WORDLIST_FILENAME = 'falloutdict.txt'
 ADDITIONAL_WORDS_NUM = 8
+NUM_OF_GUESSES = 5
 
 
 def get_words():
@@ -76,6 +76,20 @@ def word_display(secret_word, additional_words):
     print('-------------------')
 
 
+def is_valid_guess(user_entry, secret_word, additional_words):
+    """
+    Verifies that the user entered in a valid guess entry. A valid guess entry is one that matches with at least one
+    value in the additional_words list or secret_word. The user's guess is stored in user_entry.
+    
+    :returns True: if the guess is valid
+    :returns False: if the guess is invalid
+    """
+    user_entry = user_entry.strip().upper()
+    all_words = additional_words.copy()
+    all_words.append(secret_word)
+    return True if user_entry in all_words else False
+
+
 def compare_user_entry(user_entry, secret_word):
     """
     Now the game logic needs to be handled. First consider what has happened so far up to this point:
@@ -98,3 +112,23 @@ def compare_user_entry(user_entry, secret_word):
             num_correct += 1
     return num_correct
 
+
+# ------------------------------------------- Assembly -------------------------------------------
+if __name__ == '__main__':
+    secret_w = pick_secret_word()
+    additional_w = get_additional_words(secret_w)
+    word_display(secret_w, additional_w)
+    print("Guess? ")
+    for g in NUM_OF_GUESSES:
+        guess = input()
+        if is_valid_guess(guess, secret_w, additional_w):
+            pass  # Come back to me!
+        else:
+            while not is_valid_guess(guess, secret_w, additional_w):
+                print("Your guess is invalid!")
+                print("Try again: ")
+                guess = input()
+
+
+
+# ----------------------------------------- End of Assembly --------------------------------------
