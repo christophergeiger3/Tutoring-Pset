@@ -18,7 +18,7 @@ def get_words():
         print('Loading words from', WORDLIST_FILENAME)
         words = file.readlines()
         print('Words loaded.')
-        print('-------------------\n')
+        print('-------------------')
         words = words[0].split(' ')
         random.shuffle(words)
 
@@ -61,4 +61,40 @@ def get_additional_words(secret_word):
     return additional_words
 
 
+def word_display(secret_word, additional_words):
+    """
+    Prints out the words returned by the get_additional_words() function, along with the secret_word, in a random order.
+    There is no test in the test file for this function.
+    """
+    # Solution
+    all_words = additional_words
+    all_words.append(secret_word)
+    random.shuffle(all_words)
+    print("Words: ")
+    for word in all_words:
+        print("\t" + word)
+    print('-------------------')
+
+
+def compare_user_entry(user_entry, secret_word):
+    """
+    Now the game logic needs to be handled. First consider what has happened so far up to this point:
+        1. The word list has been shuffled
+        2. A secret word and some additional words have been chosen from this word list
+        3. The secret word and additional words have been displayed to the user
+        4. The user has entered in his guess as to what the secret word might be.
+    The user's guess from the words shown to him is stored in user_entry.
+    
+    Now we need to compare user_entry with the secret_word, to let the user know how much of his guess is correct.
+    
+    :returns num_correct: The number of letters in user_entry that match with secret_word. A letter in user_entry
+    'matches' if the same letter occurs in the same position in secret_word.
+    """
+    # Solution
+    num_correct = 0
+
+    for letterA, letterB in user_entry, secret_word:
+        if letterA == letterB:
+            num_correct += 1
+    return num_correct
 
