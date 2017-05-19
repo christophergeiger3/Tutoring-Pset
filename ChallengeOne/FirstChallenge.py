@@ -54,19 +54,19 @@ def route(selection):
         print('Enter two integers n, k to add together: ')
         n, k = input().strip().split()
         print(add(int(n), int(k)))
-        input("Press anything to continue...")
+        input("Press enter to continue...")
 
     elif selection == 2:
         print('Enter two integers n, k to subtract (n - k): ')
         n, k = input().strip().split()
         print(subtract(int(n), int(k)))
-        input("Press anything to continue...")
+        input("Press enter to continue...")
 
     elif selection == 3:
         print('Enter two integers n, k to multiply them: ')
         n, k = input().strip().split()
         print(multiplication(int(n), int(k)))
-        input("Press anything to continue...")
+        input("Press enter to continue...")
 
     elif selection == 4:
         print('Enter two integers n, k to divide them (n / k): ')
@@ -74,13 +74,13 @@ def route(selection):
             print("psst. What'd'ya think would happen if you divided by zero?")
         n, k = input().strip().split()
         print(division(int(n), int(k)))
-        input("Press anything to continue...")
+        input("Press enter to continue...")
 
     elif selection == 5:
         print('Enter a single number, n, to determine if it is even or odd')
         n = int(input().strip())
         print("Even!" if modulus(n) else "Odd!")
-        input("Press anything to continue...")
+        input("Press enter to continue...")
 
     else:
         print("That's not a valid input...")
