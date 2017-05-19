@@ -154,9 +154,11 @@ def modulus(n):
     return True if n % 2 == 0 else False
 
 # --- Assembly, you don't have to understand this part yet ---
-while True:
-    clear()
-    qweewq = prompt_user()
-    clear()
-    route(qweewq)
+if __name__ = "__main__":
+    while True:
+        clear()
+        qweewq = prompt_user()
+        clear()
+        route(qweewq)
+    
 # --- End of Assembly ---
