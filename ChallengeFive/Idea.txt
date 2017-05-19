@@ -1,0 +1,3 @@
+Horoscope finder
+
+Webscrapes and returns a horoscope
