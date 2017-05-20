@@ -1,4 +1,4 @@
-import random
+import random, sys
 '''
     ToDO: Add to me, finish assembly, all words should have the same length as secret_word (function: get_additional_words)
 '''
@@ -45,18 +45,19 @@ def get_additional_words(secret_word):
     ADDITIONAL_WORDS_NUM. This is the amount of words to be printed along with the secret_word.
     
     :returns additional_words: A list of ADDITIONAL_WORDS_NUM randomly selected words from the
-    falloutdict.txt word list. This list DOES NOT include the secret_word.
+    falloutdict.txt word list. Each word should have the same amount of letters as the secret_word.
+    This list DOES NOT include the secret_word.
     
-    Remember that all of the randomly selected words are stored in WORDS
+    Remember that the list of all words in the dictionary is stored in WORDS.
     """
     # Solution
     additional_words = []
     for word in range(ADDITIONAL_WORDS_NUM):
-        additional_words.append(random.choice(WORDS))
-
-        if additional_words[word] == secret_word:
-            while additional_words[word] == secret_word:
-                additional_words[word] = random.choice(WORDS)
+        while True:
+            word_to_add = random.choice(WORDS)
+            if len(word_to_add) == len(secret_word) and word_to_add != secret_word:
+                additional_words.append(word_to_add)
+                break
 
     return additional_words
 
@@ -81,10 +82,12 @@ def is_valid_guess(user_entry, secret_word, additional_words):
     Verifies that the user entered in a valid guess entry. A valid guess entry is one that matches with at least one
     value in the additional_words list or secret_word. The user's guess is stored in user_entry.
     
+    Does not mutate the list additional_words.
+    
     :returns True: if the guess is valid
     :returns False: if the guess is invalid
     """
-    user_entry = user_entry.strip().upper()
+    # Solution
     all_words = additional_words.copy()
     all_words.append(secret_word)
     return True if user_entry in all_words else False
@@ -107,28 +110,39 @@ def compare_user_entry(user_entry, secret_word):
     # Solution
     num_correct = 0
 
-    for letterA, letterB in user_entry, secret_word:
+    for letterA, letterB in zip(user_entry, secret_word):
         if letterA == letterB:
             num_correct += 1
     return num_correct
 
 
 # ------------------------------------------- Assembly -------------------------------------------
+
 if __name__ == '__main__':
     secret_w = pick_secret_word()
+    while len(secret_w) < 2:
+        # Make sure that no single / two character word lists are created
+        secret_w = pick_secret_word()
     additional_w = get_additional_words(secret_w)
     word_display(secret_w, additional_w)
     print("Guess? ")
-    for g in NUM_OF_GUESSES:
-        guess = input()
+    for g in range(NUM_OF_GUESSES):
+        guess = input().strip().upper()
         if is_valid_guess(guess, secret_w, additional_w):
-            pass  # Come back to me!
+            pass
         else:
             while not is_valid_guess(guess, secret_w, additional_w):
                 print("Your guess is invalid!")
                 print("Try again: ")
-                guess = input()
-
+                guess = input().strip().upper()
+        # handle game logic
+        print(str(compare_user_entry(guess, secret_w)) + "/" + str(len(secret_w)) + " Correct.")
+        if compare_user_entry(guess, secret_w) == len(secret_w):
+            sys.exit("You won!")
+        else:
+            print(str(NUM_OF_GUESSES - g - 1), "guesses left.")
+            if NUM_OF_GUESSES - g - 1 == 0:
+                sys.exit("You lost!")
 
 
 # ----------------------------------------- End of Assembly --------------------------------------
