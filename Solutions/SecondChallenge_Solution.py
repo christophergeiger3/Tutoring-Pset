@@ -1,13 +1,17 @@
 import random, sys
 '''
-    ToDO: Add to me, finish assembly, all words should have the same length as secret_word (function: get_additional_words)
+    Hi Pablo, I think you'll really enjoy this one!
+    Basically I want you to recreate the hacking game that you play in the Fallout games!
+    If you aren't sure what that is, or what to do, check out the docx / pdf file that came along with this file,
+    there's a lot of information I hope you'll find helpful in there...
+    And remember I'm only a message a way! (seriously, message me for like anything)
 '''
 
 WORDLIST_FILENAME = 'falloutdict.txt'
 ADDITIONAL_WORDS_NUM = 8
 NUM_OF_GUESSES = 5
 
-
+#  ------ Helper function! You can skip this code... ------
 def get_words():
     """
     Reads all hacking words to a list, then shuffles it
@@ -23,6 +27,7 @@ def get_words():
         random.shuffle(words)
 
     return words
+# --------- End of Helper function ---------
 
 WORDS = get_words()  # The shuffled list of words from falloutdict.txt
 
