@@ -18,7 +18,7 @@ def test_pick_secret_word():
             return
         print("{}: {}".format(str(num+1), str(val)))
 
-    print("Each secret_word in the previous test cases should be random")
+    print("pick_secret_word is successful if each of the previous test cases are random")
     # Returns nothing
 
 
@@ -28,7 +28,12 @@ def test_get_additional_words():
 
     for val in secret_word_test_values:
         test_li = get_additional_words(val)
-        if len(test_li) != ADDITIONAL_WORDS_NUM:
+
+        if test_li is None:
+            print("get_additional_words() not yet implemented!")
+            print("Returned: None")
+            return
+        elif len(test_li) != ADDITIONAL_WORDS_NUM:
             print("get_additional_words failed!")
             print("Expected: {} \nGot: {}".format("List of length " + ADDITIONAL_WORDS_NUM,
                                                   "List of length " + str(len(test_li))))
@@ -45,13 +50,47 @@ def test_get_additional_words():
                 print("Test case: " + val)
                 print("Expected: {}".format("List that doesn't contain secret word"))
                 print("Got: {}".format(test_li))
+                return
+    print("get_additional_words() was successful!")
 
 
 def test_is_valid_guess():
-    pass
+    secret_word = "BUILDING"
+    additional_words = ["MAYVILLE", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY", "MIDST",
+                        "INFESTATION", "SPILL", "BLUE"]
+    user_entry_set = ["mayvill", "members", "investagates", "quote", "alternative", "midst", "building", "blow"]
+    answer_set = [False, True, False, False, False, True, True, False]
+
+    for inp, ans in zip(user_entry_set, answer_set):
+        if is_valid_guess(inp, secret_word, additional_words) == ans:
+            continue
+        else:
+            if is_valid_guess(inp, secret_word, additional_words) is None:
+                print("is_valid_guess() not yet implemented!")
+                print("Returned: None")
+                return
+            print("is_valid_guess() failed!")
+            print("Test case:\n\tSecret Word: " + secret_word + "\tAdditional Words: " + str(additional_words))
+            print("Expected: {} \nGot: {}".format(ans, '"' + str(is_valid_guess(inp, secret_word, additional_words)
+                                                                 + '"')))
+            return
+
+    print("is_valid_guess() was successful!")
+
 
 def test_compare_user_entry():
-    pass
+    user_entry_set = ["DOG", 'CAT', 'BEANS', 'FIRE', 'PIZZA', 'DINGDONG', 'ANTAGONISTS', 'PROTAGONIST']
+    secret_word_set = ['FOG', 'TAP', 'TREAT', 'PIER', 'THREE', 'HONGKONG', 'PROTAGONIST', 'ANTAGONISTS']
+    answer_set = [2, 1, 0, 1, 0, 5, 0, 0]
+    for u_e, s_w, ans in zip(user_entry_set, secret_word_set, answer_set):
+        if compare_user_entry(u_e, s_w) == ans:
+            continue
+        else:
+            print("compare_user_entry() failed!")
+            print("Test case: \n\tUser entry: {}\n\tSecret Word: {}".format(str(u_e), str(s_w)))
+            print("Expected: {} \nGot: {}".format(str(ans), str(compare_user_entry(u_e, s_w))))
+            return
+    print("compare_user_entry was successful!")
 
 
 # Assembly
@@ -68,3 +107,4 @@ print("---------------------------------------")
 print("Testing compare_user_entry()....")
 test_compare_user_entry()
 print("---------------------------------------")
+sys.exit()  # Weird error if this line is removed wtf
