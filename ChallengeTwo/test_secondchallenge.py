@@ -23,7 +23,8 @@ def test_pick_secret_word():
 
 
 def test_get_additional_words():
-    secret_word_test_values = ["MAYVILLE", "BUILDING", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY"]
+    secret_word_test_values = ["MAYVILLE", "BUILDING", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY", "MIDST"
+                               "INFESTATION", "SPILL", "BLUE"]
 
     for val in secret_word_test_values:
         test_li = get_additional_words(val)
@@ -31,7 +32,19 @@ def test_get_additional_words():
             print("get_additional_words failed!")
             print("Expected: {} \nGot: {}".format("List of length " + ADDITIONAL_WORDS_NUM,
                                                   "List of length " + str(len(test_li))))
-            
+            return
+        for v in test_li:
+            if len(v) != len(val):
+                print("get_additional_words failed!")
+                print("Test case: " + val)
+                print("Expected: {}".format("Additional words of length " + len(val)))
+                print("Got list: {}".format(test_li))
+                return
+            elif val in test_li:
+                print("get_additional_words failed!")
+                print("Test case: " + val)
+                print("Expected: {}".format("List that doesn't contain secret word"))
+                print("Got: {}".format(test_li))
 
 
 def test_is_valid_guess():
@@ -47,3 +60,11 @@ print("Testing pick_secret_word()....")
 test_pick_secret_word()
 print("---------------------------------------")
 print("Testing get_additional_words()....")
+test_get_additional_words()
+print("---------------------------------------")
+print("Testing is_valid_guess()....")
+test_is_valid_guess()
+print("---------------------------------------")
+print("Testing compare_user_entry()....")
+test_compare_user_entry()
+print("---------------------------------------")
