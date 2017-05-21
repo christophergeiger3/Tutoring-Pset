@@ -23,6 +23,7 @@ def test_pick_secret_word():
 
 
 def test_get_additional_words():
+    # ToDo: Fix infinite loop
     secret_word_test_values = ["MAYVILLE", "BUILDING", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY", "MIDST"
                                "INFESTATION", "SPILL", "BLUE"]
 
