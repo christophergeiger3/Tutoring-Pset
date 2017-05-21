@@ -2,10 +2,11 @@ import random, sys
 
 '''
     Hi Pablo, I think you'll really enjoy this one!
-    Basically I want you to recreate the hacking game that you play in the Fallout games!
+    Basically I want you to recreate the hacking mini-game that you play in the Fallout games!
     If you aren't sure what that is, or what to do, check out the docx / pdf file that came along with this file,
     there's a lot of information I hope you'll find helpful in there...
-    And remember I'm only a message a way! (seriously, message me for like anything)
+    And remember I'm only a message a way! (seriously, message me for 
+    like anything)
 '''
 
 WORDLIST_FILENAME = 'falloutdict.txt'
@@ -38,7 +39,7 @@ def pick_secret_word():
     Given that the function "get_words()" will return a list of shuffled words; pick_secret_word() should get a random
     selection from said list to be the secret_word
 
-    :returns secret_word: a randomly selected word from the WORDS word list
+    :returns secret_word: a randomly selected string from the WORDS word list
     """
 
     pass  # Remove this line when you're ready to test your code!
@@ -49,7 +50,7 @@ def get_additional_words(secret_word):
     Notice that at the top of this file is written some constants in all caps. One of these constants is
     ADDITIONAL_WORDS_NUM. This is the amount of words to be printed along with the secret_word.
 
-    :returns additional_words: A list of ADDITIONAL_WORDS_NUM randomly selected words from the
+    :returns additional_words: A list of ADDITIONAL_WORDS_NUM randomly selected word strings from the
     falloutdict.txt word list. Each word should have the same amount of letters as the secret_word.
     This list DOES NOT include the secret_word.
 
@@ -61,7 +62,8 @@ def get_additional_words(secret_word):
 
 def word_display(secret_word, additional_words):
     """
-    Prints out the words returned by the get_additional_words() function, along with the secret_word, in a random order.
+    Prints out the words returned by the get_additional_words() function, along with the secret_word, in a random order,
+    line-by-line.
     There is no test in the test file for this function.
     """
 
