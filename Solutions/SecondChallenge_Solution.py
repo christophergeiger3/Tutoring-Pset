@@ -143,10 +143,12 @@ if __name__ == '__main__':
         # handle game logic
         print(str(compare_user_entry(guess, secret_w)) + "/" + str(len(secret_w)) + " Correct.")
         if compare_user_entry(guess, secret_w) == len(secret_w):
+            print("The secret word was:", secret_w)
             sys.exit("You won!")
         else:
             print(str(NUM_OF_GUESSES - g - 1), "guesses left.")
             if NUM_OF_GUESSES - g - 1 == 0:
+                print("The secret word was:", secret_w)
                 sys.exit("You lost!")
 
 
