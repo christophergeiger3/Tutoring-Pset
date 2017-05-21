@@ -18,7 +18,7 @@ def test_pick_secret_word():
             return
         print("{}: {}".format(str(num+1), str(val)))
 
-    print("pick_secret_word is successful if each of the previous test cases are random")
+    print("pick_secret_word is successful if each of the previous test cases (each secret word) is random")
     # Returns nothing
 
 
