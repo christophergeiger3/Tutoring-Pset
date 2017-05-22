@@ -62,6 +62,13 @@ def test_is_valid_guess():
     answer_set = [False, True, False, False, False, True, True, False]
 
     for inp, ans in zip(user_entry_set, answer_set):
+        is_valid_guess(inp, secret_word.upper(), additional_words)
+        if secret_word in additional_words:
+            print("is_valid_guess() failed!")
+            print("The additional_words list was mutated after running is_valid_guess()")
+            print("Got {} \nExpected: {}".format(additional_words, str(["MAYVILLE", "MEMBERS", "INVESTIGATES", "QUITE",
+                                                                        "ALTERNATIVELY", "MIDST",
+                                                                        "INFESTATION", "SPILL", "BLUE"])))
         if is_valid_guess(inp, secret_word.upper(), additional_words) == ans:
             continue
         else:
