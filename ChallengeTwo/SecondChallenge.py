@@ -65,6 +65,9 @@ def word_display(secret_word, additional_words):
     Prints out the words returned by the get_additional_words() function, along with the secret_word, in a random order,
     line-by-line.
     There is no test in the test file for this function.
+    
+    Note: If you want to try testing this function, go ahead and run this file... But be warned, if you haven't
+    implemented other functions, you may find a bunch of errors!
     """
 
     pass  # ToDo: Remove this line
