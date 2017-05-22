@@ -23,8 +23,7 @@ def test_pick_secret_word():
 
 
 def test_get_additional_words():
-    # ToDo: Fix infinite loop
-    secret_word_test_values = ["MAYVILLE", "BUILDING", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY", "MIDST"
+    secret_word_test_values = ["MAYVILLE", "BUILDING", "MEMBERS", "INVESTIGATES", "QUITE", "ALTERNATIVELY", "MIDST",
                                "INFESTATION", "SPILL", "BLUE"]
 
     for val in secret_word_test_values:
@@ -63,7 +62,7 @@ def test_is_valid_guess():
     answer_set = [False, True, False, False, False, True, True, False]
 
     for inp, ans in zip(user_entry_set, answer_set):
-        if is_valid_guess(inp, secret_word, additional_words) == ans:
+        if is_valid_guess(inp, secret_word.upper(), additional_words) == ans:
             continue
         else:
             if is_valid_guess(inp, secret_word, additional_words) is None:
