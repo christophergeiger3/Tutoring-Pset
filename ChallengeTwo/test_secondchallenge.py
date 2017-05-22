@@ -42,7 +42,7 @@ def test_get_additional_words():
             if len(v) != len(val):
                 print("get_additional_words failed!")
                 print("Test case: " + val)
-                print("Expected: {}".format("Additional words of length " + len(val)))
+                print("Expected: {}".format("Additional words of length " + str(len(val))))
                 print("Got list: {}".format(test_li))
                 return
             elif val in test_li:
