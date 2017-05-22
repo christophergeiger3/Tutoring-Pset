@@ -69,6 +69,7 @@ def test_is_valid_guess():
             print("Got: {} \nExpected: {}".format(additional_words, str(["MAYVILLE", "MEMBERS", "INVESTIGATES", "QUITE",
                                                                         "ALTERNATIVELY", "MIDST",
                                                                         "INFESTATION", "SPILL", "BLUE"])))
+            print("Hint: Lookup the copy() command in Python for lists, and see why it's important")
             return
         if is_valid_guess(inp, secret_word.upper(), additional_words) == ans:
             continue
