@@ -1,4 +1,3 @@
-# Remove this line
 """
     Hi Pablo!
     This is Christopher talking from beyond the grave. Spooky, right?
