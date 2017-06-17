@@ -31,5 +31,8 @@ html = scrape.urlopen(base_url)
 html = str(html.read())
 
 # Regular expressions
+regex = '<b class=\"date\">.+?</b> - (.+)'
+pattern = re.compile(regex)
+
 
 # Display to the user
