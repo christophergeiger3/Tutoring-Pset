@@ -1,6 +1,6 @@
 import random, sys
 '''
-    Hi Pablo, I think you'll really enjoy this one!
+    I think you'll really enjoy this one!
     Basically I want you to recreate the hacking game that you play in the Fallout games!
     If you aren't sure what that is, or what to do, check out the docx / pdf file that came along with this file,
     there's a lot of information I hope you'll find helpful in there...
