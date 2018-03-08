@@ -9,7 +9,7 @@
     is something that I wrote to help the problem along. You don't need to understand it.
 
     I really hope you enjoy this, I've put a lot of effort into these problems, and if you ever need anything I'm only
-    a message away. Like seriously. I'm pretty lonely actually.
+    a message away.
 
     P.S.
     Keep the file labeled FirstChallenge.py in the same folder with test_firstchallenge.py, and do the same with all
