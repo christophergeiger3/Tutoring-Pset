@@ -1,7 +1,5 @@
 """
-    Hi Pablo!
-    This is Christopher talking from beyond the grave. Spooky, right?
-    Ok, but for real.
+    Hello, and welcome to your first Python Problem Set!
     This is your first challenge! You'll notice that in Python 3 notes can be written with triple double quotes (")
     or triple single quotes (')
 
@@ -10,9 +8,6 @@
     By the way: Any code that has the comment:
         # Helper Function! You don't need to understand this code!
     is something that I wrote to help the problem along. You don't need to understand it.
-
-    I really hope you enjoy this, I've put a lot of effort into these problems, and if you ever need anything I'm only
-    a message away. Like seriously. I'm pretty lonely actually.
 
     P.S.
     Keep the file labeled FirstChallenge.py in the same folder with test_firstchallenge.py, and do the same with all
@@ -102,7 +97,6 @@ def add(n, k):
     :returns ans: Your answer, as an integer
     """
     # Write your code on the following lines!
-
 
     pass  # Remove this line when you are ready to test your function!
 
