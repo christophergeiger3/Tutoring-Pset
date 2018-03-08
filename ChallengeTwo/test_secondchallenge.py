@@ -116,4 +116,4 @@ print("---------------------------------------")
 print("Testing compare_user_entry()....")
 test_compare_user_entry()
 print("---------------------------------------")
-sys.exit()  # Weird error if this line is removed wtf
+sys.exit()
