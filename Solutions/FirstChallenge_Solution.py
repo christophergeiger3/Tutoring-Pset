@@ -1,7 +1,4 @@
 """
-    Hi Pablo!
-    This is Christopher talking from beyond the grave. Spooky, right?
-    Ok, but for real.
     This is your first challenge! You'll notice that in Python 3 notes can be written with triple double quotes (")
     or triple single quotes (')
 
